@@ -29,7 +29,7 @@ the types of the outputs.
 | ------------------------------------------------ | -------------------------------- | ----------------------------- |
 | `function addFive(number) { return number + 5}`  |                                  |                               |
 | `function sum(A, B) { return A + B }`            |                                  |                               |
-| `function concat(A, B) { return "" + A + B }`    |                                  |                               |
+| `function concat(A, B) { return "" + A + B }`    | number, number                   |     string                       |
 | `document.querySelector`                         |                                  |                               |
 | `window.fetch`                                   |                                  |                               |
 
@@ -90,7 +90,7 @@ Fill in the table using the 'shape' shorthand
 | ------------- | -------------------------------- | ------------------------ |
 | `getName`     |                                  |                          |
 | `getAge`      |                                  |                          |
-| `makePerson`  |                                  |                          |
+| `makePerson`  |name: string, age: number         |object{name: string, age: number}|
 | `birthday`    |                                  |                          |
 | `getDistance` |                                  |                          |
 
@@ -119,7 +119,7 @@ For practice, add the function signature to the functions in the table.
 | ------------- | -------------------------- | -------------------------- | ------------------ |
 | `getName`     |                            |                            |                    |
 | `getAge`      |                            |                            |                    |
-| `makePerson`  |                            |                            |                    |
+| `makePerson`  |string, string              |object                      |Person: object : object|
 | `birthday`    |                            |                            |                    |
 | `getDistance` |                            |                            |                    |
 
@@ -134,10 +134,10 @@ was a function.
 
 | Operator   | types of inputs                  | type of output                | function signature                     |
 | ---------- | -------------------------------- | ----------------------------- | -------------------------------------- |
-| \*         | number, number                   | number                        | multiply(a: number, b: number): number |
+| \*         |number, number                    |number                         |multiply(a: number, b: number): number  |
 | + (string) |                                  |                               |                                        |
 | + (number) |                                  |                               |                                        |
-| -          |                                  |                               |                                        |
+| -          |number, number                    |number                         |subtract(a: number, b: number) : number |
 | ^          |                                  |                               |                                        |
 | \*\*       |                                  |                               |                                        |
 | \|\|       |                                  |                               |                                        |
@@ -158,6 +158,6 @@ Fill in the rest of the table.
 | `EventTarget.addEventListener` | string, handler(e: Event): void  | void                          | addEventListener(type: string, handler: function): void |
 | `window.setTimeout`            |                                  |                               |                                                        |
 | `Array.prototype.map`          |                                  |                               |                                                        |
-| `Array.prototype.find`         |                                  |                               |                                                         |
+| `Array.prototype.find`         | cb: callback function            | E: element                    |array.find(cb: callback function): element                         |
 | `Array.prototype.filter`       |                                  |                               |                                                         |
 | `Array.prototype.reduce`       |                                  |                               |                                                         |
